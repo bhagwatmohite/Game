@@ -1,0 +1,626 @@
+.body1 {
+  background: linear-gradient(to right, rgb(235, 155, 52), rgb(235, 52, 223));
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.game-ui {
+  padding: 20px;
+  background: linear-gradient(to right, rgb(235, 155, 52), rgb(235, 52, 223));
+  border-radius: 10px;
+}
+
+.header {
+  background-color: #ff6699;
+  padding: 10px;
+}
+
+.logo {
+  width: 150px;
+}
+
+.entertainment-text {
+  color: white;
+  font-size: 1rem;
+}
+
+.balance-section {
+  background-color: #33cc33;
+  padding: 10px;
+  color: white;
+  margin: 10px auto;
+  border-radius: 8px;
+  max-width: 250px;
+  width: 300px;
+}
+
+.balance-value {
+  font-size: 1.8rem;
+  background: white;
+  color: red;
+  border-radius: 20px;
+}
+
+.animal-chips {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.left-chips,
+.right-chips {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.chip {
+  background-color: #ff3366;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.right-chips .chip {
+  width: 60px;
+  height: 60px;
+}
+
+.left-chips .chip {
+  width: 60px;
+  height: 60px;
+}
+
+.animal-cards .animal-card {
+  position: relative;
+  background-color: #99ff99;
+  border-radius: 20px;
+  border: 2px;
+  text-align: center;
+  padding: 5px;
+  height: 200px;
+}
+
+.animal-card .card-number {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: #33ccff;
+  color: white;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 40%;
+
+}
+
+
+/* .animal-img {
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 8px 8px 0 0;
+  border-radius: 30px;
+
+} */
+.animal-img {
+  margin-top: 30px;
+  object-fit: contain;
+  /* Ensures the image fits within the container */
+  border-radius: 50%;
+  /* Makes the image circular */
+  width: 80px;
+  /* Width of the image */
+  height: 80px;
+  /* Height of the image */
+  background: none;
+  /* Removes background color */
+}
+
+.card-value {
+  font-size: 1rem;
+  color: #0066cc;
+  font-weight: bold;
+  padding: 5px;
+  background: white;
+  border-radius: 50px;
+
+}
+
+.points-section {
+  background: linear-gradient(to right, #eb34e2, #a234eb);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  width: 200px;
+  border-radius: 40px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.points-value {
+  font-size: 1.2rem;
+}
+
+.control-buttons-wrapper {
+  background-color: #34a8eb;
+  padding: 5px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.control-buttons .btn {
+  font-size: 0.9rem;
+  margin: 5px;
+  background-color: white;
+  color: #ff3366;
+  border: none;
+}
+
+.timer-section .timer {
+  background: linear-gradient(to right, #eb34d9, #3734eb);
+  color: white;
+  padding: 10px;
+  border-radius: 40px;
+  font-size: 2rem;
+  width: 200px;
+  margin-left: 100px;
+  margin-top: 10px;
+
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .logo {
+    width: 80px;
+  }
+
+  .entertainment-text {
+    font-size: 0.9rem;
+  }
+
+  .balance-section {
+    max-width: 200px;
+    font-size: 1.2rem;
+  }
+
+  .chip {
+    width: 40px;
+    height: 40px;
+    font-size: 0.8rem;
+  }
+
+  .right-chips .chip {
+    width: 50px;
+    height: 50px;
+  }
+
+  .animal-img {
+    height: 80px;
+  }
+
+  .control-buttons .btn {
+    font-size: 0.8rem;
+    margin: 2px;
+  }
+
+  .timer {
+    font-size: 1.5rem;
+    box-shadow: #bcf542;
+  }
+}
+
+@media (max-width: 576px) {
+  .balance-section {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .control-buttons-wrapper {
+    flex-direction: column;
+  }
+
+  .points-section {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .control-buttons .btn {
+    width: 100%;
+    margin: 3px 0;
+  }
+}
+
+/* Style for the chip container */
+.left-chips {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style for each individual chip */
+.chip {
+  width: 50px;
+  /* Adjust the size of the circle */
+  height: 50px;
+  margin: 10px 0;
+  /* Space between chips */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  /* Makes the chip circular */
+  background-color: #007bff;
+  /* Background color of the chip */
+  color: white;
+  /* Text color */
+  font-weight: bold;
+
+  border: 3px dotted white;
+  /* Dotted white border */
+  border-width: 3px;
+  /* Adjust thickness of the dotted border */
+  box-sizing: border-box;
+  /* Ensures padding doesn't affect the size of the circle */
+}
+
+.chip-color-1 {
+  background-color: #fca503;
+}
+
+.chip-color-2 {
+  background-color: #33FF57;
+}
+
+.chip-color-3 {
+  background-color: #3357FF;
+}
+
+.chip-color-4 {
+  background-color: #f542da;
+}
+
+
+.chip-colorr-1 {
+  background-color: #f55442;
+}
+
+.chip-colorr-2 {
+  background-color: #33FF57;
+}
+
+.chip-colorr-3 {
+  background-color: #fca503;
+}
+
+.chip-color-4 {
+  background-color: #bcf542;
+}
+
+/* 
+after adding animal card with differnet color */
+.animal-card {
+  position: relative;
+  border-radius: 20px;
+  border: 2px;
+  text-align: center;
+  padding: 5px;
+  height: 200px;
+  transition: background-color 0.3s ease;
+}
+
+.animal-card .card-number {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: #3357FF;
+  color: white;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 40%;
+}
+
+.animal-img {
+  margin-top: 30px;
+  object-fit: contain;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+
+.card-value {
+  font-size: 1rem;
+  color: #0066cc;
+  font-weight: bold;
+  padding: 5px;
+  background: white;
+  border-radius: 50px;
+}
+
+/* for the numbers  */
+/* Add some styles to the numbers wrapper */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.balance-and-numbers-wrapper {
+  display: flex;
+  justify-content: center;
+  /* Centers the whole content */
+  align-items: center;
+  width: 100%;
+  /* Makes sure this div takes full width between the logo and Winning Points */
+  gap: 20px;
+  /* Adds space between the balance sections and the numbers */
+}
+
+.balance-section {
+  text-align: center;
+  flex-shrink: 0;
+  /* Ensures these sections stay fixed in size */
+}
+
+.numbers-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  /* Adds space between the numbers */
+  flex-grow: 1;
+  /* Ensures the numbers section expands and centers */
+}
+
+.number-item {
+  background-color: #33ccff;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 18px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* for the popup */
+.result-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  z-index: 9999;
+}
+
+.result-details img {
+  width: 150px;
+  height: 100px;
+}
+
+
+/* css for the loading animal data */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid transparent;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  background: linear-gradient(to right, #eb34d9, #3734eb);
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* do responsive header */
+
+/* Global reset for margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: linear-gradient(to right, #eb34d9, #bde04d);
+}
+
+/* Logo section */
+.logo {
+  width: 150px;
+  /* Set a fixed size for the logo */
+  height: auto;
+}
+
+/* Wrapper for balance and numbers */
+.balance-and-numbers-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  /* Allow wrapping on smaller screens */
+}
+
+/* Balance section */
+.balance-section {
+  text-align: center;
+  color: white;
+  margin: 0 10px;
+  flex: 1;
+}
+
+.balance-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Numbers section */
+.numbers-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Profile section */
+.profile-section {
+  text-align: center;
+  color: white;
+}
+
+/* Profile image */
+.profile-avatar-img {
+  width: 15%;
+  height: 15%;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+
+  /* Large screens (desktop) */
+  .header {
+    padding: 20px;
+  }
+
+  .logo {
+    width: 180px;
+  }
+
+  .balance-section p,
+  .numbers-wrapper p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 992px) {
+
+  /* Medium screens (tablets) */
+  .balance-and-numbers-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .balance-section,
+  .numbers-wrapper,
+  .profile-section {
+    margin-bottom: 15px;
+  }
+
+  .profile-avatar-img {
+    width: 20%;
+    height: 20%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Small screens (phones) */
+  .header {
+    padding: 10px;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .balance-section {
+    margin-bottom: 10px;
+  }
+
+  .numbers-wrapper {
+    margin-bottom: 10px;
+  }
+
+  .profile-avatar-img {
+    width: 25%;
+    height: 25%;
+  }
+
+  .balance-value {
+    font-size: 1.2rem;
+  }
+
+  .balance-section p,
+  .numbers-wrapper p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+
+  /* Extra small screens (very small phones) */
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .balance-section p,
+  .numbers-wrapper p,
+  .profile-section p {
+    font-size: 0.75rem;
+  }
+
+  .balance-value {
+    font-size: 1rem;
+  }
+
+  .profile-avatar-img {
+    width: 30%;
+    height: 30%;
+  }
+}
+
+/* for the footer */

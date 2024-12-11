@@ -177,7 +177,7 @@
 
 //   useEffect(() => {
 //     // Fetch animal data from API when the component mounts
-//     fetch('http://localhost:8080/getallimages')
+//     fetch('http://api.12home.vip/getallimages')
 //       .then(response => response.json())
 //       .then(data => {
 //         // Map the API response to the required format with default values (e.g., value = 0)
@@ -350,7 +350,7 @@
 
 //   useEffect(() => {
 //     // Fetch animal data from API when the component mounts
-//     fetch('http://localhost:8080/getallimages')
+//     fetch('http://api.12home.vip/getallimages')
 //       .then(response => response.json())
 //       .then(data => {
 //         // Map the API response to the required format with default values (e.g., value = 0)
@@ -584,7 +584,7 @@
 
 //   useEffect(() => {
 //     // Fetch animal data from API when the component mounts
-//     fetch('http://localhost:8080/getallimages')
+//     fetch('http://api.12home.vip/getallimages')
 //       .then(response => response.json())
 //       .then(data => {
 //         const formattedData = data.map(item => ({
@@ -904,7 +904,7 @@
 //   const [isBettingAllowed, setIsBettingAllowed] = useState(true);  // To control if betting is allowed
 
 //   useEffect(() => {
-//     fetch('http://localhost:8080/getallimages')
+//     fetch('http://api.12home.vip/getallimages')
 //       .then(response => response.json())
 //       .then(data => {
 //         const formattedData = data.map(item => ({
@@ -1229,7 +1229,7 @@
 //   const [isBettingAllowed, setIsBettingAllowed] = useState(true);  // To control if betting is allowed
 
 //   useEffect(() => {
-//     fetch('http://localhost:8080/getallimages')
+//     fetch('http://api.12home.vip/getallimages')
 //       .then(response => response.json())
 //       .then(data => {
 //         const formattedData = data.map(item => ({
@@ -1566,7 +1566,7 @@
 //   const [isBettingAllowed, setIsBettingAllowed] = useState(true);  // To control if betting is allowed
 
 //   useEffect(() => {
-//     fetch('http://localhost:8080/getallimages')
+//     fetch('http://api.12home.vip/getallimages')
 //       .then(response => response.json())
 //       .then(data => {
 //         const formattedData = data.map(item => ({
@@ -1912,7 +1912,7 @@
 //   const [isBettingAllowed, setIsBettingAllowed] = useState(true);  // To control if betting is allowed
 
 //   useEffect(() => {
-//     fetch('http://localhost:8080/getallimages')
+//     fetch('http://api.12home.vip/getallimages')
 //       .then(response => response.json())
 //       .then(data => {
 //         const formattedData = data.map(item => ({
@@ -2264,7 +2264,7 @@
 //   const [isGameOver, setIsGameOver] = useState(false);  // To track if the game is over and show the number
 
 //   useEffect(() => {
-//     fetch('http://localhost:8080/getallimages')
+//     fetch('http://api.12home.vip/getallimages')
 //       .then(response => response.json())
 //       .then(data => {
 //         const formattedData = data.map(item => ({
@@ -2707,7 +2707,7 @@
 //     // Function to start a new game
 //     const startGame = () => {
 //       // Fetch animal data
-//       fetch('http://localhost:8080/getallimages')
+//       fetch('http://api.12home.vip/getallimages')
 //         .then(response => response.json())
 //         .then(data => {
 //           const formattedData = data.map(item => ({
@@ -3186,7 +3186,7 @@
 
 //       setIsLoading(true);
 
-//       fetch('http://localhost:8080/getallimages')
+//       fetch('http://api.12home.vip/getallimages')
 //         .then(response => response.json())
 //         .then(data => {
 //           const formattedData = data.map(item => ({
@@ -3720,7 +3720,7 @@
 
 //       setIsLoading(true);
 
-//       fetch('http://localhost:8080/getallimages')
+//       fetch('http://api.12home.vip/getallimages')
 //         .then(response => response.json())
 //         .then(data => {
 //           const formattedData = data.map(item => ({
@@ -4367,7 +4367,7 @@
 
 //       setIsLoading(true);
 
-//       fetch('http://localhost:8080/getallimages')
+//       fetch('http://api.12home.vip/getallimages')
 //         .then(response => response.json())
 //         .then(data => {
 //           const formattedData = data.map(item => ({
@@ -4788,7 +4788,7 @@
 
 //     if (userId) {
 //       // Fetch the total balance for the user
-//       fetch(`http://localhost:8080/user/totalamount/${userId}`)
+//       fetch(`http://api.12home.vip/user/totalamount/${userId}`)
 //         .then(response => response.json())
 //         .then(data => {
 //           setTotalBalance(data);  // Update the totalBalance state with API response
@@ -5068,7 +5068,7 @@ const GameDashboard = ({ onLogout }) => {
 
       setIsLoading(true);
 
-      fetch('http://localhost:8080/getallimages')
+      fetch('http://api.12home.vip/getallimages')
         .then(response => response.json())
         .then(data => {
           const formattedData = data.map(item => ({
@@ -5235,7 +5235,7 @@ const GameDashboard = ({ onLogout }) => {
     }
 
     const userId = localStorage.getItem("userId");
-    const response = await axios.get(`http://localhost:8080/user/totalamount/${userId}`);
+    const response = await axios.get(`http://api.12home.vip/user/totalamount/${userId}`);
     const fetchedTotalBalance = response.data; // Assuming this returns the total balance
 
 
@@ -5495,7 +5495,7 @@ const GameDashboard = ({ onLogout }) => {
     }
 
     try {
-      const response = await axios.get(`http://localhost:8080/user/totalamount/${userId}`);
+      const response = await axios.get(`http://api.12home.vip/user/totalamount/${userId}`);
       setTotalBalance(response.data); // Update the total balance
     } catch (error) {
       //console.error("Error fetching total balance:", error);
@@ -5518,7 +5518,7 @@ const GameDashboard = ({ onLogout }) => {
       const points = calculatePoints();
       const updatedBalance = totalBalance + points;
 
-      const url = `http://localhost:8080/user/totalamount/${userId}?id=${userId}&totalAmount=${updatedBalance}`;
+      const url = `http://api.12home.vip/user/totalamount/${userId}?id=${userId}&totalAmount=${updatedBalance}`;
       const response = await fetch(url, {
         method: 'PUT',
         headers: {

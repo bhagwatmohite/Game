@@ -40,7 +40,7 @@
 //       params.append('email', email);
 //       params.append('password', password);
 
-//       const response = await axios.post('http://localhost:8080/admin/login', params);
+//       const response = await axios.post('http://api.12home.vip/admin/login', params);
 
 //       if (response.status === 200) {
 //         // Redirect to the dashboard if login is successful
@@ -176,7 +176,7 @@ const Login = ({ onLogin }) => {
       params.append('email', email);
       params.append('password', password);
 
-      const response = await axios.post('http://localhost:8080/admin/login', params);
+      const response = await axios.post('http://api.12home.vip/admin/login', params);
 
       if (response.status === 200) {
         // Store email in localStorage

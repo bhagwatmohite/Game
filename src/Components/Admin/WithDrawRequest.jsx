@@ -13,13 +13,13 @@
 
 //     const fetchWithdrawRequests = async () => {
 //       try {
-//         const response = await axios.get('http://localhost:8080/getallwithdrawamount');
+//         const response = await axios.get('http://api.12home.vip/getallwithdrawamount');
 //         const requests = response.data;
 //         setWithdrawRequests(requests);
 
 //         // Fetch user details for each withdrawal request
 //         const userRequests = requests.map(async (request) => {
-//           const userResponse = await axios.get(`http://localhost:8080/userid/${request.user_Id}`);
+//           const userResponse = await axios.get(`http://api.12home.vip/userid/${request.user_Id}`);
 //           setUserDetails(prevState => ({
 //             ...prevState,
 //             [request.user_Id]: userResponse.data,
@@ -139,13 +139,13 @@ const WithDrawRequest = () => {
   // Function to fetch withdrawal requests and associated user details
   const fetchWithdrawRequests = async () => {
     try {
-      const response = await axios.get('http://localhost:8080/getallwithdrawamount');
+      const response = await axios.get('http://api.12home.vip/getallwithdrawamount');
       const requests = response.data;
       setWithdrawRequests(requests);
 
       // Fetch user details for each withdrawal request
       const userRequests = requests.map(async (request) => {
-        const userResponse = await axios.get(`http://localhost:8080/userid/${request.user_Id}`);
+        const userResponse = await axios.get(`http://api.12home.vip/userid/${request.user_Id}`);
         setUserDetails(prevState => ({
           ...prevState,
           [request.user_Id]: userResponse.data,
@@ -169,7 +169,7 @@ const WithDrawRequest = () => {
   const handleApprove = async (withdrawId) => {
     if (window.confirm("Are you sure you want to approve this withdrawal?")) {
       try {
-        await axios.put(`http://localhost:8080/approvewithdraw/${withdrawId}`);
+        await axios.put(`http://api.12home.vip/approvewithdraw/${withdrawId}`);
         toast.success('Withdrawal approved..!');
         // Re-fetch the withdraw requests after approval
         fetchWithdrawRequests();

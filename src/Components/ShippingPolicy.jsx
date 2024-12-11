@@ -1,8 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
-
 import { Link } from "react-router-dom"
 
-const OurPolicy = () => {
+const ShippingPolicy = () => {
   return (
     <>
       <header className="header-section">
@@ -54,17 +53,43 @@ const OurPolicy = () => {
       <section className="intro-section" >
 
         <div className="container" style={{ paddingTop: '10%' }}>
-          <h3 style={{ color: 'white', textAlign: 'center', marginBottom: '10%' }}>Read Our Privacy Policy</h3>
+          <h3 style={{ color: 'white', textAlign: 'center', marginBottom: '10%' }}>Read Our All Policy</h3>
           <div className="row">
-            <div className="col-md-4">
+            {/* <div className="col-md-4">
               <div className="intro-text-box text-box text-white">
                 <div className="top-meta"> <a href="">Privacy Policy</a></div>
 
                 <p>We are committed to protecting your privacy. Your personal information (such as name, email, and payment details) is collected only to process your transactions and enhance your experience. We do not share your information with third parties, except for trusted payment gateways like Razorpay. All data is securely stored and encrypted.</p>
+              </div>
+            </div> */}
+            {/* <div className="col-md-4">
+              <div className="intro-text-box text-box text-white">
+                <div className="top-meta"> <a href="">Refund Policy</a></div>
+
+                <p>The game fails to start due to technical issues.
+                  A payment error occurs and no credits are added to the user's account.
+                </p>
+                <p>Refunds will be processed within 7-10 business days. Please contact support with transaction details for any refund requests.</p>
+              </div>
+            </div> */}
+            {/* <div className="col-md-4">
+              <div className="intro-text-box text-box text-white">
+                <div className="top-meta"><a href="">Return Policy</a></div>
+
+                <p>As this is a virtual game, there are no physical items to return. For any issues related to gameplay or points, please contact our support team.</p>
+              </div>
+            </div> */}
+            {/* <hr ></hr> */}
+
+            <div className="col-md-4">
+              <div className="intro-text-box text-box text-white">
+                <div className="top-meta"><a href="">Shipping Policy</a></div>
+
+                <p>As this is a virtual game, there is no physical delivery involved. Users can access the platform and participate in games instantly upon successful payment.
+                </p>
                 {/* <a href="#" className="read-more">Read More  <img src="img/icons/double-arrow.png" alt="#" /></a> */}
               </div>
             </div>
-
 
             <div className="col-md-4">
               <div className="intro-text-box text-box text-white">
@@ -109,9 +134,8 @@ const OurPolicy = () => {
           <div className="copyright" style={{ color: 'white' }}><a href="">Produced By EzioInfotech</a> 2024 @ All rights reserved</div>
         </div>
       </footer>
-
     </>
   )
 }
 
-export default OurPolicy
+export default ShippingPolicy

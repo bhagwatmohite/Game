@@ -151,6 +151,9 @@ import ContactUs from './Components/ContactUs';
 import GameDashboard from './Components/GameDashboard';
 import Home from './Components/Home';
 import OurPolicy from './Components/OurPolicy';
+import RefundPolicy from './Components/RefundPolicy';
+import ShippingPolicy from './Components/ShippingPolicy';
+import Terms from './Components/Terms';
 import PrivateRoute from './Components/UI/PrivateRoute';
 import Profile from './Components/UI/UerProfile/Profile';
 import UserLogin from './Components/UI/UserLogin';
@@ -228,6 +231,9 @@ function App() {
         {/* -------------------this is user interface routes------------------------- */}
         <Route path="/" element={<Home />} />
         <Route path="/ourpolicy" element={<OurPolicy />} />
+        <Route path="/refundpolicy" element={<RefundPolicy />} />
+        <Route path="/shippingpolicy" element={<ShippingPolicy />} />
+        <Route path="/terms" element={<Terms />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/register" element={<UserRegister />} />
         <Route

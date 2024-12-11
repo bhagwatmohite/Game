@@ -43,7 +43,7 @@
 //     }
 
 //     try {
-//       const response = await axios.post('http://localhost:8080/user/login', null, {
+//       const response = await axios.post('http://api.12home.vip/user/login', null, {
 //         params: {
 //           mobileNumber: mobileNumber,
 //           password: password,
@@ -206,7 +206,7 @@ const UserLogin = ({ onLogin }) => {
 
     try {
       // Step 1: Try to log in the user
-      const response = await axios.post('http://localhost:8080/user/login', null, {
+      const response = await axios.post('http://api.12home.vip/user/login', null, {
         params: {
           mobileNumber: mobileNumber,
           password: password,
@@ -216,7 +216,7 @@ const UserLogin = ({ onLogin }) => {
       if (response.status === 200) {
         // Successfully logged in, fetch user data
         // Step 2: Fetch all users to find the user ID
-        const usersResponse = await axios.get('http://localhost:8080/getalluser');
+        const usersResponse = await axios.get('http://api.12home.vip/getalluser');
         const user = usersResponse.data.find((u) => u.mobileNumber === mobileNumber);
 
         if (user) {

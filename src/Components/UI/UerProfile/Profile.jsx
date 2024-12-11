@@ -28,11 +28,11 @@
 
 //       try {
 //         // Fetch user details
-//         const userResponse = await axios.get(`http://localhost:8080/userid/${userId}`);
+//         const userResponse = await axios.get(`http://api.12home.vip/userid/${userId}`);
 //         setUser(userResponse.data);
 
 //         // Fetch total balance
-//         const balanceResponse = await axios.get(`http://localhost:8080/user/totalamount/${userId}`);
+//         const balanceResponse = await axios.get(`http://api.12home.vip/user/totalamount/${userId}`);
 //         setTotalBalance(parseFloat(balanceResponse.data));
 //       } catch (err) {
 //         console.error('Error fetching user data:', err);
@@ -75,7 +75,7 @@
 //     }
 
 //     try {
-//       const response = await axios.post('http://localhost:8080/api/payment/createOrder', null, {
+//       const response = await axios.post('http://api.12home.vip/api/payment/createOrder', null, {
 //         params: { amount: parseFloat(amountToPay), userId },
 //       });
 
@@ -98,7 +98,7 @@
 //               userId: userId,
 //             };
 
-//             await axios.post('http://localhost:8080/api/payment/updateOrder', paymentData);
+//             await axios.post('http://api.12home.vip/api/payment/updateOrder', paymentData);
 //             toast.success('Payment Successful!');
 
 //             // Update balance after successful payment
@@ -281,11 +281,11 @@ const Profile = () => {
 
       try {
         // Fetch user details
-        const userResponse = await axios.get(`http://localhost:8080/userid/${userId}`);
+        const userResponse = await axios.get(`http://api.12home.vip/userid/${userId}`);
         setUser(userResponse.data);
 
         // Fetch total balance
-        const balanceResponse = await axios.get(`http://localhost:8080/user/totalamount/${userId}`);
+        const balanceResponse = await axios.get(`http://api.12home.vip/user/totalamount/${userId}`);
         setTotalBalance(parseFloat(balanceResponse.data));
       } catch (err) {
         console.error('Error fetching user data:', err);
@@ -327,7 +327,7 @@ const Profile = () => {
       };
 
       // Make the API call to save the withdrawal request
-      const response = await axios.post('http://localhost:8080/addwithdrawammount', withdrawalData);
+      const response = await axios.post('http://api.12home.vip/addwithdrawammount', withdrawalData);
 
       // Update the UI upon successful response
       setTotalBalance((prevBalance) => prevBalance - withdrawAmount);
@@ -356,7 +356,7 @@ const Profile = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:8080/api/payment/createOrder', null, {
+      const response = await axios.post('http://api.12home.vip/api/payment/createOrder', null, {
         params: { amount: parseFloat(amountToPay), userId },
       });
 
@@ -379,7 +379,7 @@ const Profile = () => {
               userId: userId,
             };
 
-            await axios.post('http://localhost:8080/api/payment/updateOrder', paymentData);
+            await axios.post('http://api.12home.vip/api/payment/updateOrder', paymentData);
             toast.success('Payment Successful!');
 
             // Update balance after successful payment

@@ -84,7 +84,7 @@ const AddImages = ({ show, onHide, onImageAdded }) => {
     formData.append('number', number);
     formData.append('image', imageFile);
 
-    axios.post('http://localhost:8080/addimage', formData)
+    axios.post('http://api.12home.vip/addimage', formData)
       .then((response) => {
         onImageAdded(response.data);  // Update the image list
         onHide();  // Close modal after successful addition

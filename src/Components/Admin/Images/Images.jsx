@@ -18,7 +18,7 @@
 
 //   // Fetch images from backend API
 //   useEffect(() => {
-//     axios.get('http://localhost:8080/getallimages')
+//     axios.get('http://api.12home.vip/getallimages')
 //       .then((response) => {
 //         setImages(response.data);
 //       })
@@ -43,7 +43,7 @@
 
 //   // Handle update image details via API
 //   const handleUpdate = (id, updatedImage) => {
-//     axios.put(`http://localhost:8080/updateimage/${id}`, updatedImage)
+//     axios.put(`http://api.12home.vip/updateimage/${id}`, updatedImage)
 //       .then((response) => {
 //         const updatedImages = images.map((img) =>
 //           img.id === id ? { ...img, ...updatedImage } : img
@@ -59,7 +59,7 @@
 
 //   // Handle delete action
 //   const handleDelete = (id) => {
-//     axios.delete(`http://localhost:8080/deleteimage/${id}`)
+//     axios.delete(`http://api.12home.vip/deleteimage/${id}`)
 //       .then(() => {
 //         setImages(images.filter(image => image.id !== id));
 //         alert('Image deleted successfully');
@@ -84,7 +84,7 @@
 //       selector: row => row.imagePath,
 //       cell: row => (
 //         <img
-//           src={`http://localhost:8080/Images/${row.imagePath}`}
+//           src={`http://api.12home.vip/Images/${row.imagePath}`}
 //           alt={`image-${row.id}`}
 //           style={{ width: '50px', height: '50px' }}
 //         />
@@ -187,7 +187,7 @@
 
 //   // Fetch all images on component mount
 //   useEffect(() => {
-//     axios.get('http://localhost:8080/getallimages')
+//     axios.get('http://api.12home.vip/getallimages')
 //       .then((response) => {
 //         setImages(response.data);
 //       })
@@ -216,7 +216,7 @@
 //       formData.append('image', updatedImage.image);  // Append the selected image file
 //     }
 
-//     axios.put(`http://localhost:8080/updateimage/${id}`, formData)
+//     axios.put(`http://api.12home.vip/updateimage/${id}`, formData)
 //       .then((response) => {
 //         // Update the image in the state
 //         const updatedImages = images.map((img) =>
@@ -234,7 +234,7 @@
 
 //   // Delete image
 //   const handleDelete = (id) => {
-//     axios.delete(`http://localhost:8080/deleteimage/${id}`)
+//     axios.delete(`http://api.12home.vip/deleteimage/${id}`)
 //       .then(() => {
 //         setImages(images.filter(image => image.id !== id));
 //         alert('Image deleted successfully');
@@ -256,7 +256,7 @@
 //       selector: row => row.imagePath,
 //       cell: row => (
 //         <img
-//           src={`http://localhost:8080/Images/${row.imagePath}`}
+//           src={`http://api.12home.vip/Images/${row.imagePath}`}
 //           alt={`image-${row.id}`}
 //           style={{ width: '50px', height: '50px' }}
 //         />
@@ -348,7 +348,7 @@ const Images = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://localhost:8080/getallimages')
+    axios.get('http://api.12home.vip/getallimages')
       .then((response) => {
         setImages(response.data);
       })
@@ -373,7 +373,7 @@ const Images = () => {
       formData.append('image', updatedImage.image);
     }
 
-    axios.put(`http://localhost:8080/updateimage/${id}`, formData)
+    axios.put(`http://api.12home.vip/updateimage/${id}`, formData)
       .then((response) => {
         const updatedImages = images.map((img) =>
           img.id === id ? { ...img, ...updatedImage } : img
@@ -390,7 +390,7 @@ const Images = () => {
   };
 
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:8080/deleteimage/${id}`)
+    axios.delete(`http://api.12home.vip/deleteimage/${id}`)
       .then(() => {
         setImages(images.filter(image => image.id !== id));
         toast.success('Image delete successfully...');
@@ -415,7 +415,7 @@ const Images = () => {
       selector: row => row.imagePath,
       cell: row => (
         <img
-          src={`http://localhost:8080/Images/${row.imagePath}`}
+          src={`http://api.12home.vip/Images/${row.imagePath}`}
           alt={`image-${row.id}`}
           style={{ width: '50px', height: '50px' }}
         />

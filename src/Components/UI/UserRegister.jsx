@@ -30,7 +30,7 @@
 //   // Check mobile number uniqueness
 //   const checkMobileNumberUnique = async (mobileNumber) => {
 //     try {
-//       const response = await axios.get('http://localhost:8080/getalluser');
+//       const response = await axios.get('http://api.12home.vip/getalluser');
 //       const existingUsers = response.data;
 //       const isMobileExist = existingUsers.some(user => user.mobileNumber === mobileNumber);
 //       setIsMobileUnique(!isMobileExist); // Set mobile uniqueness status
@@ -85,7 +85,7 @@
 
 //     try {
 //       // Send POST request to the server for registration
-//       const response = await axios.post('http://localhost:8080/use/register', userData);
+//       const response = await axios.post('http://api.12home.vip/use/register', userData);
 
 //       if (response.status === 200) {
 //         // Successfully registered, redirect to login or dashboard
@@ -244,7 +244,7 @@ const UserRegister = () => {
   // Check mobile number uniqueness
   const checkMobileNumberUnique = async (mobileNumber) => {
     try {
-      const response = await axios.get('http://localhost:8080/getalluser');
+      const response = await axios.get('http://api.12home.vip/getalluser');
       const existingUsers = response.data;
       const isMobileExist = existingUsers.some(user => user.mobileNumber === mobileNumber);
       setIsMobileUnique(!isMobileExist); // Set mobile uniqueness status
@@ -311,7 +311,7 @@ const UserRegister = () => {
 
     try {
       // Send POST request to the server for registration
-      const response = await axios.post('http://localhost:8080/user/register', userData);
+      const response = await axios.post('http://api.12home.vip/user/register', userData);
 
       if (response.status === 200) {
         // Successfully registered, redirect to login or dashboard

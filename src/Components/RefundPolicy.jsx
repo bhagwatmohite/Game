@@ -1,8 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
-
 import { Link } from "react-router-dom"
 
-const OurPolicy = () => {
+const RefundPolicy = () => {
   return (
     <>
       <header className="header-section">
@@ -54,13 +53,17 @@ const OurPolicy = () => {
       <section className="intro-section" >
 
         <div className="container" style={{ paddingTop: '10%' }}>
-          <h3 style={{ color: 'white', textAlign: 'center', marginBottom: '10%' }}>Read Our Privacy Policy</h3>
+          <h3 style={{ color: 'white', textAlign: 'center', marginBottom: '10%' }}>Read Our All Policy</h3>
           <div className="row">
+
             <div className="col-md-4">
               <div className="intro-text-box text-box text-white">
-                <div className="top-meta"> <a href="">Privacy Policy</a></div>
+                <div className="top-meta"> <a href="">Refund Policy</a></div>
 
-                <p>We are committed to protecting your privacy. Your personal information (such as name, email, and payment details) is collected only to process your transactions and enhance your experience. We do not share your information with third parties, except for trusted payment gateways like Razorpay. All data is securely stored and encrypted.</p>
+                <p>The game fails to start due to technical issues.
+                  A payment error occurs and no credits are added to the user's account.
+                </p>
+                <p>Refunds will be processed within 7-10 business days. Please contact support with transaction details for any refund requests.</p>
                 {/* <a href="#" className="read-more">Read More  <img src="img/icons/double-arrow.png" alt="#" /></a> */}
               </div>
             </div>
@@ -114,4 +117,4 @@ const OurPolicy = () => {
   )
 }
 
-export default OurPolicy
+export default RefundPolicy

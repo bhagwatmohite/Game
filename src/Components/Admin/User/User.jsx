@@ -103,7 +103,7 @@
 //   useEffect(() => {
 //     const fetchUsers = async () => {
 //       try {
-//         const response = await axios.get('http://localhost:8080/getalluser');
+//         const response = await axios.get('http://api.12home.vip/getalluser');
 //         setUsers(response.data);
 //         console.log("Users fetched:", response.data);
 //       } catch (error) {
@@ -136,7 +136,7 @@
 //     const isConfirmed = window.confirm('Are you sure you want to delete this user?');
 //     if (isConfirmed) {
 //       try {
-//         await axios.delete(`http://localhost:8080/deleteuser/${id}`);
+//         await axios.delete(`http://api.12home.vip/deleteuser/${id}`);
 //         setUsers(users.filter(user => user.id !== id)); // Remove the user from the state
 //         toast.success('User deleted successfully!');
 //       } catch (error) {
@@ -189,7 +189,7 @@
 //     }
 
 //     try {
-//       const response = await axios.put(`http://localhost:8080/updateuser/${selectedUser.id}`, selectedUser);
+//       const response = await axios.put(`http://api.12home.vip/updateuser/${selectedUser.id}`, selectedUser);
 //       setUsers(users.map(user => user.id === selectedUser.id ? response.data : user)); // Update the user list
 //       setShowModal(false); // Close the modal
 //       toast.success('User updated successfully!');
@@ -394,7 +394,7 @@ const User = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/getalluser');
+        const response = await axios.get('http://api.12home.vip/getalluser');
         setUsers(response.data);
         console.log("Users fetched:", response.data);
       } catch (error) {
@@ -428,7 +428,7 @@ const User = () => {
     const isConfirmed = window.confirm('Are you sure you want to delete this user?');
     if (isConfirmed) {
       try {
-        await axios.delete(`http://localhost:8080/deleteuser/${id}`);
+        await axios.delete(`http://api.12home.vip/deleteuser/${id}`);
         setUsers(users.filter(user => user.id !== id)); // Remove the user from the state
         toast.success('User deleted successfully!');
       } catch (error) {
@@ -488,7 +488,7 @@ const User = () => {
     }
 
     try {
-      const response = await axios.put(`http://localhost:8080/updateuser/${selectedUser.id}`, selectedUser);
+      const response = await axios.put(`http://api.12home.vip/updateuser/${selectedUser.id}`, selectedUser);
       setUsers(users.map(user => user.id === selectedUser.id ? response.data : user)); // Update the user list
       setShowModal(false); // Close the modal
       toast.success('User updated successfully!');
